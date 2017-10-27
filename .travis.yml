@@ -5,6 +5,8 @@ node_js:
 
 before_script:
 - npm install -g --silent @angular/cli
+- npm install -g --silent firebase-tools
 
 script:
 - ng build --prod
+- firebase deploy --token $FIREBASE_TOKEN --non-interactive
